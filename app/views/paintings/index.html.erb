@@ -1,0 +1,36 @@
+<div class="main">
+
+	<h1>Awesome Famous Paintings</h1>
+	<% counter = 0 %>
+	<% @paintings.each do |p| %>
+	<% if counter % 2 == 0 %>
+	<% counter += 1 %>
+					<div class="btn-group" data-toggle="buttons">
+  <label class="btn btn-primary btn-xs">
+    <input type="radio" name="options" id="option1"> Repeat Button
+  </label>
+
+  	<% end %>
+  
+  
+		<div class="painting">
+			<%=p.name%>
+			<div class="btn-group" data-toggle="buttons">
+  <label class="btn btn-primary btn-xs">
+    <input type="radio" name="options" id="option1"> Option 1
+  </label>
+  <label class="btn btn-primary btn-xl">
+    <input type="radio" name="options" id="option2"> Option 2
+  </label>
+  <label class="btn btn-primary btn-xs">
+    <input type="radio" name="options" id="option3"> Option 3
+  </label> 
+</div>
+		</div>
+		<div class="details">
+			Painted by <%=p.artist%> in <%=p.year %>.
+		</div>
+<button type="button" class="btn btn-lg btn-primary btn-xs" disabled="disabled">Hurry! Click me!!!</button>
+	<% end %>
+
+</div>
