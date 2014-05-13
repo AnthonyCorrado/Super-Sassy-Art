@@ -1,34 +1,36 @@
-div class="main">
+<div class="main">
 
-<div class="container-fluid">
+	<h1>Awesome Famous Paintings</h1>
+	<% counter = 0 %>
+	<% @paintings.each do |p| %>
+	<% if counter % 2 == 0 %>
+	<% counter += 1 %>
+					<div class="btn-group" data-toggle="buttons">
+  <label class="btn btn-primary btn-xs">
+    <input type="radio" name="options" id="option1"> Repeat Button
+  </label>
 
-<div class="col-md-3">
-<p class = "column-cool"> This is a column. col-md-3. How great! Columns are like soooo cool. The grid is the best! It makes everything else seem like dirt. That is how great the grid is. Yayyyy grid.</p>
-
+  	<% end %>
+  
+  
+		<div class="painting">
+			<%=p.name%>
+			<div class="btn-group" data-toggle="buttons">
+  <label class="btn btn-primary btn-xs">
+    <input type="radio" name="options" id="option1"> Option 1
+  </label>
+  <label class="btn btn-primary btn-xl">
+    <input type="radio" name="options" id="option2"> Option 2
+  </label>
+  <label class="btn btn-primary btn-xs">
+    <input type="radio" name="options" id="option3"> Option 3
+  </label> 
 </div>
+		</div>
+		<div class="details">
+			Painted by <%=p.artist%> in <%=p.year %>.
+		</div>
+<button type="button" class="btn btn-lg btn-primary btn-xs" disabled="disabled">Hurry! Click me!!!</button>
+	<% end %>
 
-<div class="col-md-6">
-
-<h1>Awesome Famous Paintings</h1>
-
-
-<% @paintings.each do |p| %>
-
-
-<div class="painting">
-<%=http://p.name%>
-</div>
-<div class="details">
-Painted by <%=p.artist%> in <%=p.year %>.
-</div>
-
-<% end %>
-</div>
-
-<div class="col-md-3">
-This is another column.
-<img src = 
-</div> 
-
-</div>
 </div>
